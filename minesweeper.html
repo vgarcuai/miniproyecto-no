@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscaminas</title>
+    <!-- Incluir a Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-800 text-white flex items-center justify-center h-screen">
+    <div class="flex flex-col items-center">
+        <h1 class="text-3xl font-bold mb-4">Buscaminas</h1>
+
+        <!-- Cronometro -->
+        <div id="timer" class="text-xl mb-2">Tiempo: 00:00:000</div>
+        
+        <!-- Estado de juego -->
+        <div id="status" class="text-xl mb-4">Equipo NO</div>
+
+        <!-- Slider de bomba -->
+        <div class="flex items-center mb-4">
+            <label for="bomb-slider" class="mr-4">Numero de bombas: <span id="bomb-count">10</span></label>
+            <input type="range" id="bomb-slider" min="5" max="30" value="10" class="slider">
+        </div>
+
+        <!-- Grid del juego -->
+        <div id="grid" class="grid grid-cols-10 gap-1"></div>
+        
+        <!-- Boton de reseteo -->
+        <button id="reset" class="mt-4 px-4 py-2 bg-blue-500 hover:bg-blue-600 rounded">Resetear</button>
+    </div>
+
+    <!-- JS file -->
+    <script src="app.js"></script>
+</body>
+</html>
+
+
+
